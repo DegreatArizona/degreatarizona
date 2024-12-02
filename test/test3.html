@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Box Around Hero Section</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e293b, #9333ea);
+    }
+    
+    .hero {
+      position: relative;
+      width: 80%;
+      height: 60vh;
+      background: linear-gradient(135deg, #3b82f6, #9333ea);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Floating Box */
+    .floating-box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 3px solid #fff;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: floatBox 10s infinite linear;
+    }
+
+    /* Keyframes for Floating Animation */
+    @keyframes floatBox {
+      0% {
+        top: 10%;
+        left: 10%;
+      }
+      25% {
+        top: 10%;
+        left: 80%;
+      }
+      50% {
+        top: 80%;
+        left: 80%;
+      }
+      75% {
+        top: 80%;
+        left: 10%;
+      }
+      100% {
+        top: 10%;
+        left: 10%;
+      }
+    }
+
+    /* Text Styling Inside Hero Section */
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-family: Arial, sans-serif;
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero-text p {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <!-- Floating Box -->
+    <div class="floating-box"></div>
+    
+    <!-- Hero Text Content -->
+    <div class="hero-text">
+      <h1>Your Company Name</h1>
+      <p>Innovating the Future</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            font-weight: 500;
+            color: #6c757d;
+        }
+
+        /* Add some spacing */
+        .stats {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row stats">
+        <div class="col stat-item">
+            <div class="stat-number" id="clients">0</div>
+            <div class="stat-label">Satisfied clients</div>
+        </div>
+        <div class="col stat-item">
+            <div class="stat-number" id="projects">0</div>
+            <div class="stat-label">Projects completed</div>
+        </div>
+        <div class="col stat-item">
+            <div class="stat-number" id="reviews">0</div>
+            <div class="stat-label">Reviews given</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        animateCounter(document.getElementById('clients'), 10);
+        animateCounter(document.getElementById('projects'), 50);
+        animateCounter(document.getElementById('reviews'), 34);
+    });
+
+    function animateCounter(element, target) {
+        let count = 0;
+        const duration = 2000; // Animation duration in milliseconds
+        const increment = target / (duration / 100); // Calculate the increment for each step
+
+        const counter = setInterval(() => {
+            count += increment;
+            if (count >= target) {
+                count = target;
+                clearInterval(counter);
+            }
+            element.textContent = Math.floor(count); // Update the number in the element
+        }, 100); // Interval of 100ms
+    }
+</script>
+
+</body>
+</html>
