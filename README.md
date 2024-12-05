@@ -1,9 +1,7 @@
 ## Hi there 👋
 
-<!--
-**DegreatArizona/degreatarizona** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**DegreatArizona/degreatarizona** is a ✨ _special_ ✨ repository because its my portfolio.
 
-Here are some ideas to get you started:
 
 - 🔭 I’m currently working on A vehiclebreakdown Assistance Website.
 - 🌱 I’m currently learning many things in the Tech industry.
@@ -13,4 +11,3 @@ Here are some ideas to get you started:
 - 📫 How to reach me: `degreatarizona@gmail.com` `08107466823`.
 - 😄 Pronouns: He/Him.
 - ⚡ Fun fact: Always active.
--->
