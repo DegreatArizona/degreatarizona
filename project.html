@@ -32,73 +32,168 @@
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="#"
-                    ><img
-                        src="image/DegreatArizonaLogo.png"
-                        class="img-fluid img-brand rounded-top"
-                        alt="DegreatArizona Logo"
-                    />
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="image/DegreatArizonaLogo.png"
+              class="img-fluid img-brand rounded-top"
+              alt="DegreatArizona Logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler hidden-lg-up"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link actives"
+                  href="index.html"
+                  aria-current="page"
+                  >Home
+                  <span class="visually-hidden">(current)</span>
                 </a>
-                <button
-                    class="navbar-toggler hidden-lg-up"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavId"
-                    aria-controls="collapsibleNavId"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link actives"
-                                href="index.html"
-                                aria-current="page"
-                                >Home
-                                <span class="visually-hidden"
-                                    >(current)</span
-                                >
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="service.html"
-                                >Services</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="project.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="ship.html">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                    <button
-                        class="btn nav-btn my-2 my-sm-0"
-                        onclick="window.location='training.html'"
-                    >
-                        <i class="fa fa-book" aria-hidden="true"></i>Tech Training
-                    </button>
-                </div>
-            </div>
-        </nav>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="project.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <button
+              class="btn nav-btn my-2 my-sm-0"
+              onclick="window.location='training.html'"
+            >
+              <i class="fa fa-book" aria-hidden="true"></i>Tech Training
+            </button>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <div id="project" class="section project">
+        <div class="container">
+          <span class="portfolio-label">Projects</span>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="section-title">
+              Projects We've <span id="Creations">Worked On</span>
+            </h2>
+          </div>
+          <p class="portfolio-intro mb-3">
+            Discover our latest work in web development, cybersecurity, and
+            graphic design.
+          </p>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="image/project/web.png"
+                    alt="Project 1"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="label">Web Crawling tool</h3>
+                  <p>
+                    A web Crawling tool for crawling every indexed directory and
+                    files in a website.
+                  </p>
+                  <a
+                    href="https://github.com/DegreatArizona/DNS-Enumeration.git"
+                    class="behance-link"
+                    target="_blank"
+                    >View Tool →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="image/project/project3.png"
+                    alt="Project 2"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="label">Classified Ads Website</h3>
+                  <p>
+                    A Classified Ads Marketplace Website for buying and selling
+                    goods and services.
+                  </p>
+                  <a
+                    href="https://ariscomart.com.ng"
+                    class="behance-link"
+                    target="_blank"
+                    >View Website →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="image/project/Section 1.png"
+                    alt="Project 3"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="label">Modern Graphic Design</h3>
+                  <p>
+                    Designed a clean and intuitive flyer designed for a business
+                    for marketing purpose.
+                  </p>
+                  <a
+                    href="image/project/Section 1.png"
+                    class="behance-link"
+                    target="_blank"
+                    >View Design →</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
-        <div class="copy">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2023 - <script>document.write(new Date().getFullYear());</script> <i class="fa fa-dot-circle-o" aria-hidden="true"></i> DegreatArizona Services Limited <br><em>Let Tech Lead</em></div>
+      <div class="copy">
+        Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2023 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <i class="fa fa-dot-circle-o" aria-hidden="true"></i> DegreatArizona
+        Services Limited <br /><em>Let Tech Lead</em>
+      </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
