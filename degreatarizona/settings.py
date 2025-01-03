@@ -27,7 +27,7 @@ MEDIA_URL = "media/"
 SECRET_KEY = 'django-insecure-(%r7#h448=m2dybbx^$%*b4@04o(zw6@2(-3jk^#jwe$g=!bk^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','degreatarizona.vercel.app']
 
