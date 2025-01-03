@@ -154,11 +154,16 @@
                       <input type="tel" class="form-control" placeholder="Phone number" required>
                     </div>
                     <div class="col-md-6 mb-4">
-                        <select name="reason" id="" class="form-control" required>
-                            <option value="">--Mode of Learning--</option>
-                            <option value="Personal">Personal</option>
-                            <option value="In Group">In Group</option>
-                        </select>
+                      <select name="refer" id="refer" class="form-control" required>
+                        <option value="">--How did you hear about us?--</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="Twitter">X (Twitter)</option>
+                        <option value="Referral">Referral</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-4 d-none" id="referral">
+                        <input type="text" class="form-control" name="referral" placeholder="Who Referred you?"/>
                     </div>
                     <div class="col-md-6 mb-4">
                         <select name="reason" id="" class="form-control" required>
@@ -177,7 +182,7 @@
                       </select>
                     </div>
                     <div class="col-12 mb-4">
-                      <textarea class="form-control" rows="5" placeholder="Additional Information" required></textarea>
+                      <textarea class="form-control" rows="5" placeholder="Your Address" required></textarea>
                     </div>
                     <div class="col-12 text-end">
                       <button type="submit" class="submit-btn">Enroll Now</button>
@@ -188,6 +193,18 @@
             </div>
           </div>
     </main>
+    <script>
+      const ref = document.getElementById("refer");
+      const refInput = document.getElementById("referral");
+      ref.addEventListener("change", function () {
+        if (ref.value === "Referral") {
+          refInput.classList.remove("d-none");
+        } else {
+          refInput.classList.add("d-none");
+        }
+      });
+    </script>
+    
     <footer>
         <div class="copy">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2023 - <script>document.write(new Date().getFullYear());</script> <i class="fa fa-dot-circle-o" aria-hidden="true"></i> DegreatArizona Services Limited <br><em>Let Tech Lead</em></div>
     </footer>
