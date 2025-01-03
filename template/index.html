@@ -1,441 +1,433 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DegreatArizona - Let Tech Lead</title>
-        <!-- Bootstrap CSS (latest version) -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="shortcut icon" href="image/favicon.jpg" type="image/x-icon">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <main>
+      <div
+        class="hero-section d-flex justify-content-center align-items-center"
+      >
+        <div class="hero">
+          <!-- Floating Box -->
+          <div class="floating-box"></div>
 
-        <!-- FontAwesome for icons -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/responsive.min.css" />
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="/"
-                        ><img
-                            src="image/DegreatArizonaLogo.png"
-                            class="img-fluid img-brand rounded-top"
-                            alt="DegreatArizona Logo"
-                        />
-                    </a>
-                    <button
-                        class="navbar-toggler hidden-lg-up"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavId"
-                        aria-controls="collapsibleNavId"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavId">
-                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link actives"
-                                    href="index.html"
-                                    aria-current="page"
-                                    >Home
-                                    <span class="visually-hidden"
-                                        >(current)</span
-                                    >
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="service.html"
-                                    >Services</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="project.html">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="product.html">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <button
-                            class="btn nav-btn my-2 my-sm-0"
-                            onclick="window.location='contact.html'"
-                        >
-                            Contact Us
-                        </button>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div
-                class="hero-section d-flex justify-content-center align-items-center"
-            >
-                <div class="hero">
-                    <!-- Floating Box -->
-                    <div class="floating-box"></div>
-
-                    <!-- Hero Text Content -->
-                    <div class="hero-text text-center">
-                      <p>Let Tech Lead</p>
-                        <h1 class="display-4">
-                            Building Cutting-Edge Web Technology
-                        </h1>
-                        <div class="prof-text">
-                            <span style="font-weight: 900">A</span>&nbsp;<span
-                                id="profession"
-                            ></span
-                            ><span class="prof">&#124;</span>
-                        </div>
-                        <div class="cta-buttons mt-3">
-                            <button onclick="window.location='quote.html'" class="btn btn-primary">
-                                Get A Quote
-                            </button>
-                            <button
-                                onclick="window.location='training.html'"
-                                class="btn btn-outline-light"
-                            >
-                            <i class="fa fa-book" aria-hidden="true"></i> Register For Our Bootcamp
-                            </button>
-                        </div>
-                    </div>
-                </div>
+          <!-- Hero Text Content -->
+          <div class="hero-text text-center">
+            <p>Let Tech Lead</p>
+            <h1 class="display-4">Building Cutting-Edge Web Technology</h1>
+            <div class="prof-text">
+              <span style="font-weight: 900">A</span>&nbsp;<span
+                id="profession"
+              ></span
+              ><span class="prof">&#124;</span>
             </div>
+            <div class="cta-buttons mt-3">
+              <button
+                onclick="window.location='{% url 'quote' %}'"
+                class="btn btn-primary"
+              >
+                Get A Quote
+              </button>
+              <button
+                onclick="window.location='{% url 'training' %}'"
+                class="btn btn-outline-light"
+              >
+                <i class="fa fa-book" aria-hidden="true"></i> Register For Our
+                Bootcamp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="container">
+      <div class="container">
         <div class="row stats">
-            <div class="col stat-item">
-                <div class="stat-number"><span id="clients">0</span><span>+</span></div>
-                <div class="stat-label">Satisfied clients</div>
+          <div class="col stat-item">
+            <div class="stat-number">
+              <span id="clients">0</span><span>+</span>
             </div>
-            <div class="col stat-item">
-                <div class="stat-number"><span id="projects">0</span><span>+</span></div>
-                <div class="stat-label">Projects completed</div>
+            <div class="stat-label">Satisfied clients</div>
+          </div>
+          <div class="col stat-item">
+            <div class="stat-number">
+              <span id="projects">0</span><span>+</span>
             </div>
-            <div class="col stat-item">
-                <div class="stat-number"><span id="reviews">0</span><span>+</span></div>
-                <div class="stat-label">Reviews given</div>
+            <div class="stat-label">Projects completed</div>
+          </div>
+          <div class="col stat-item">
+            <div class="stat-number">
+              <span id="reviews">0</span><span>+</span>
             </div>
+            <div class="stat-label">Reviews given</div>
+          </div>
         </div>
-    </div>
-    <div class="skills-section text-dark" id="skills">
+      </div>
+      <div class="skills-section text-dark" id="skills">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <span class="skills-label">Services We Offer</span>
-                    <h2 class="section-title">Bringing Innovation to Life Across <span id="project">Development, Design, and Security</span></h2>
-                    <p class="skills-intro"><b>Let’s build something exceptional together!</b> Take your project to the next level with seamless web development, powerful graphics, and top-notch security solutions. Ready to start?</p>
-                    <a href="contact.html" class="contact-btn" target="_blank">Get In Touch</a>
-                </div>
-                <br>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <i class="fa fa-desktop"></i>
-                                </div>
-                                <h3>Full Stack Web Development</h3>
-                                <p>
-                                    Transforming your ideas into robust and scalable web applications. Whether it’s a full-stack solution or front-end development, I utilize modern technologies like Django, React, and more to deliver intuitive, responsive websites that drive results. From e-commerce platforms to corporate websites.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <i class="fa fa-paint-brush"></i>
-                                </div>
-                                <h3>Graphics Designing</h3>
-                                <p>
-                                    Designing visually striking and brand-focused graphics that leave a lasting impression. From logo creation to marketing materials, I craft designs that reflect your brand’s identity and resonate with your audience. Whether you need a complete branding package or individual designs, I ensure your visuals stand out.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <i class="fa fa-shield"></i>
-                                </div>
-                                <h3>cybersecurity</h3>
-                                <p>
-                                    Securing your digital presence with comprehensive cybersecurity services. As a Certified Ethical Hacker, I conduct vulnerability assessments, penetration testing, and security audits to safeguard your systems from cyber threats. My focus is to ensure that your applications, networks, and data remain secure.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <i class="fa fa-wordpress" aria-hidden="true"></i>
-                                </div>
-                                <h3>WordPress Development</h3>
-                                <p>
-                                    Building dynamic and user-friendly websites using WordPress, the world’s most popular content management system (CMS). Whether you need a blog, business site, or e-commerce store, I offer custom WordPress development, theme customization, plugin integration, and SEO optimization to help your business grow.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <span class="skills-label">Services We Offer</span>
+              <h2 class="section-title">
+                Bringing Innovation to Life Across
+                <span id="project">Development, Design, and Security</span>
+              </h2>
+              <p class="skills-intro">
+                <b>Let’s build something exceptional together!</b> Take your
+                project to the next level with seamless web development,
+                powerful graphics, and top-notch security solutions. Ready to
+                start?
+              </p>
+              <a href="{% url 'contact' %}" class="contact-btn" target="_blank"
+                >Get In Touch</a
+              >
             </div>
-        </div>
-        </div>
-        <div class="animated-background">
-            <div id="project" class="section project">
-                <div class="container">
-                  <span class="portfolio-label">Projects</span>
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h2 class="section-title">Projects We've <span id="Creations">Worked On</span></h2>
+            <br />
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="skill-card">
+                    <div class="skill-icon">
+                      <i class="fa fa-desktop"></i>
+                    </div>
+                    <h3>Full Stack Web Development</h3>
+                    <p>
+                      Transforming your ideas into robust and scalable web
+                      applications. Whether it’s a full-stack solution or
+                      front-end development, I utilize modern technologies like
+                      Django, React, and more to deliver intuitive, responsive
+                      websites that drive results. From e-commerce platforms to
+                      corporate websites.
+                    </p>
                   </div>
-                  <p class="portfolio-intro mb-3">
-                    Discover our latest work in web development, cybersecurity, and graphic design.
-                  </p>
-              
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="portfolio-card">
-                        <div class="portfolio-image">
-                          <img src="image/project/web.png" alt="Project 1" class="img-fluid">
-                        </div>
-                        <div class="portfolio-content">
-                          <h3 class="label">Web Crawling tool</h3>
-                          <p>A web Crawling tool for crawling every indexed directory and files in a website.</p>
-                          <a href="https://github.com/DegreatArizona/DNS-Enumeration.git" class="behance-link" target="_blank">View Tool →</a>
-                        </div>
-                      </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="skill-card">
+                    <div class="skill-icon">
+                      <i class="fa fa-paint-brush"></i>
                     </div>
-              
-                    <div class="col-md-4">
-                      <div class="portfolio-card">
-                        <div class="portfolio-image">
-                          <img src="image/project/project3.png" alt="Project 2" class="img-fluid">
-                        </div>
-                        <div class="portfolio-content">
-                          <h3 class="label">Classified Ads Website</h3>
-                          <p>A Classified Ads Marketplace Website for buying and selling goods and services.</p>
-                          <a href="https://ariscomart.com.ng" class="behance-link" target="_blank">View Website →</a>
-                        </div>
-                      </div>
+                    <h3>Graphics Designing</h3>
+                    <p>
+                      Designing visually striking and brand-focused graphics
+                      that leave a lasting impression. From logo creation to
+                      marketing materials, I craft designs that reflect your
+                      brand’s identity and resonate with your audience. Whether
+                      you need a complete branding package or individual
+                      designs, I ensure your visuals stand out.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="skill-card">
+                    <div class="skill-icon">
+                      <i class="fa fa-shield"></i>
                     </div>
-              
-                    <div class="col-md-4">
-                      <div class="portfolio-card">
-                        <div class="portfolio-image">
-                          <img src="image/project/Section 1.png" alt="Project 3" class="img-fluid">
-                        </div>
-                        <div class="portfolio-content">
-                          <h3 class="label">Modern Graphic Design</h3>
-                          <p>Designed a clean and intuitive flyer designed for a business for marketing purpose.</p>
-                          <a href="image/project/Section 1.png" class="behance-link" target="_blank">View Design →</a>
-                        </div>
-                      </div>
+                    <h3>cybersecurity</h3>
+                    <p>
+                      Securing your digital presence with comprehensive
+                      cybersecurity services. As a Certified Ethical Hacker, I
+                      conduct vulnerability assessments, penetration testing,
+                      and security audits to safeguard your systems from cyber
+                      threats. My focus is to ensure that your applications,
+                      networks, and data remain secure.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="skill-card">
+                    <div class="skill-icon">
+                      <i class="fa fa-wordpress" aria-hidden="true"></i>
                     </div>
+                    <h3>WordPress Development</h3>
+                    <p>
+                      Building dynamic and user-friendly websites using
+                      WordPress, the world’s most popular content management
+                      system (CMS). Whether you need a blog, business site, or
+                      e-commerce store, I offer custom WordPress development,
+                      theme customization, plugin integration, and SEO
+                      optimization to help your business grow.
+                    </p>
                   </div>
                 </div>
               </div>
-            <div class="cubes-container">
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
-            </div>
-        </div>
-        <div class="test-section">
-            <div class="test-head">
-              <h2>What Our Clients Say About Us</h2>
-              <p>Transform your brand with our innovative digital solutions that captivate and engage your audience.</p>
-          </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="card border-0 border-bottom border-primary shadow-sm">
-                    <div class="card-body p-4 p-xxl-5">
-                      <figure>
-                        <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="image/test/Fatima.png" height="100px" width="100px" alt="Fatima">
-                        <figcaption>
-                          <div class="bsb-ratings text-primary mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-                          <blockquote class="bsb-blockquote-icon mb-4">Degreatarizona Services Limited transformed our outdated systems with their exceptional web development and cybersecurity expertise. Their dedication to client satisfaction is evident in every detail. Truly outstanding work!</blockquote>
-                          <h4 class="mb-2">Fatima K.</h4>
-                          <h5 class="fs-6 text-secondary mb-0">Operations Manager</h5>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card border-0 border-bottom border-primary shadow-sm">
-                    <div class="card-body p-4 p-xxl-5">
-                      <figure>
-                        <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="image/test/Kabiru.jpeg" height="100px" width="100px" alt="Kabiru">
-                        <figcaption>
-                          <div class="bsb-ratings text-primary mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-                          <blockquote class="bsb-blockquote-icon mb-4">I was blown away by the creativity and precision of Degreatarizona Services Limited. From logo design to website development, their team exceeded my expectations. Highly recommended for anyone seeking top-tier digital solutions!</blockquote>
-                          <h4 class="mb-2">Kabiru O.</h4>
-                          <h5 class="fs-6 text-secondary mb-0">Entrepreneur</h5>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card border-0 border-bottom border-primary shadow-sm">
-                    <div class="card-body p-4 p-xxl-5">
-                      <figure>
-                        <img class="img-fluid rounded rounded-circle mb-4 border border-5" loading="lazy" src="image/test/Chinyere.png" height="100px" width="100px" alt="Chinyere">
-                        <figcaption>
-                          <div class="bsb-ratings text-primary mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
-                          <blockquote class="bsb-blockquote-icon mb-4">Working with Degreatarizona Services Limited was a game-changer for our business. They delivered a stunning website that is not only visually appealing but also user-friendly and secure. Their professionalism and attention to detail are unmatched!</blockquote>
-                          <h4 class="mb-2">Chinyere A.</h4>
-                          <h5 class="fs-6 text-secondary mb-0">Business Owner</h5>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true" ></span> -->
-                <i class="fa fa-arrow-left" aria-hidden="true" style="border: 1px solid #1e3a8a; border-radius: 50px; color: black; padding: 10px;"></i>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-                <i class="fa fa-arrow-right" aria-hidden="true" style="border: 1px solid #1e3a8a; border-radius: 50px; color: black; padding: 10px;"></i>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
-        </main>
-        <div class="social-icon">
-            <a href="https://facebook.com/degreatarizona1" target="_blank" class="fab fa-facebook"></a>
-            <a href="https://instagram.com/degreatarizona" target="_blank" class="fab fa-instagram"></a>
-            <a href="https://t.me/degreatarizona" target="_blank" class="fab fa-telegram"></a>
-            <a href="https://linkedin.com/company/degreatarizona" target="_blank" class="fab fa-linkedin"></a>
-            <a href="https://wa.me/+2348107466823" target="_blank" class="fa fa-whatsapp"></a>
-            <a href="https://x.com/degreatarizona" target="_blank" class="fab fa-twitter"></a>
-            <a href="https://github.com/degreatarizona" target="_blank" class="fab fa-github"></a>
         </div>
-        <footer class="">
+      </div>
+      <div class="animated-background">
+        <div id="project" class="section project">
           <div class="container">
-            <!-- Call to Action -->
-            <div class="row mt-4">
-              <div class="col-12 text-center mb-4">
-                <h5>Let’s Build Something Amazing Together!</h5>
-                <a href="quote.html" class="btn btn-primary btn-sm me-2">Get a Quote</a>
-                <a href="project.html" class="btn btn-outline-light btn-sm">View Projects</a>
-              </div>
+            <span class="portfolio-label">Projects</span>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h2 class="section-title">
+                Projects We've <span id="Creations">Worked On</span>
+              </h2>
             </div>
-        
+            <p class="portfolio-intro mb-3">
+              Discover our latest work in web development, cybersecurity, and
+              graphic design.
+            </p>
+
             <div class="row">
-              <!-- About Me Section -->
-              <div class="col-md mb-3">
-                <div><img src="image/DegreatArizonaLogo.png" alt=""></div>
-                <p>
-                  We specialize in Full Stack Web Development, WordPress Development, Graphic Designing, and Cyber Security. 
-                  We are passionate about crafting digital solutions that make an impact.
-                </p>
-              </div>
-        
-              <!-- Quick Links Section -->
-              <div class="col-md mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                  <li><a href="/" class="text-light text-decoration-none">Home</a></li>
-                  <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
-                  <li><a href="service.html" class="text-light text-decoration-none">Services</a></li>
-                  <li><a href="product.html" class="text-light text-decoration-none">Products</a></li>
-                  <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
-                  <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
-                </ul>
-              </div>
-        
-              <!-- Contact Info Section -->
-              <div class="col-md-4 mb-3">
-                <h5>Contact Info</h5>
-                <p>Email: <a href="mailto:degreatarizona@gmail.com" class="text-light">degreatarizona@gmail.com</a></p>
-                <p>Phone: +2348107466823</p>
-                <p>Location: Awka, Anambra State, Nigeria</p>
+              <div class="col-md-4">
+                <div class="portfolio-card">
+                  <div class="portfolio-image">
+                    <img
+                      src="{% static 'image/project/web.png' %}"
+                      alt="Project 1"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="portfolio-content">
+                    <h3 class="label">Web Crawling tool</h3>
+                    <p>
+                      A web Crawling tool for crawling every indexed directory
+                      and files in a website.
+                    </p>
+                    <a
+                      href="https://github.com/DegreatArizona/DNS-Enumeration.git"
+                      class="behance-link"
+                      target="_blank"
+                      >View Tool →</a
+                    >
+                  </div>
+                </div>
               </div>
 
-              <!-- Subscribtion Section -->
-              <div class="col-md mb-3">
-                <h5>Newsletter</h5>
-                <form method="post">
-                  <div class="d-flex bg-white">
-                    <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id=""
-                    placeholder="Email Address"
-                  />
-                  <button
-                    type="submit"
-                    class="btn"
-                    style="background: #1e3a8a; color: white; border-radius: 0;"
-                  >
-                    Submit
-                  </button>
+              <div class="col-md-4">
+                <div class="portfolio-card">
+                  <div class="portfolio-image">
+                    <img
+                      src="{% static 'image/project/project3.png' %}"
+                      alt="Project 2"
+                      class="img-fluid"
+                    />
                   </div>
-                </form>
-                
+                  <div class="portfolio-content">
+                    <h3 class="label">Classified Ads Website</h3>
+                    <p>
+                      A Classified Ads Marketplace Website for buying and
+                      selling goods and services.
+                    </p>
+                    <a
+                      href="https://ariscomart.com.ng"
+                      class="behance-link"
+                      target="_blank"
+                      >View Website →</a
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-        
-            <!-- Copyright -->
-            <div class="row mt-4">
-              <div class="col-12 text-center">
-                <p class="small mb-0">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2023 - <script>document.write(new Date().getFullYear());</script> <i class="fa fa-dot-circle-o" aria-hidden="true"></i> DegreatArizona Services Limited <br><em>Let Tech Lead</em></p>
+
+              <div class="col-md-4">
+                <div class="portfolio-card">
+                  <div class="portfolio-image">
+                    <img
+                      src="{% static 'image/project/Section 1.png' %}"
+                      alt="Project 3"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="portfolio-content">
+                    <h3 class="label">Modern Graphic Design</h3>
+                    <p>
+                      Designed a clean and intuitive flyer designed for a
+                      business for marketing purpose.
+                    </p>
+                    <a
+                      href="{% static 'image/project/Section 1.png' %}"
+                      class="behance-link"
+                      target="_blank"
+                      >View Design →</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </footer>                 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-        <!-- JavaScript -->
-        <script src="js/index.js"></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+        </div>
+        <div class="cubes-container">
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+        </div>
+      </div>
+      <div class="test-section">
+        <div class="test-head">
+          <h2>What Our Clients Say About Us</h2>
+          <p>
+            Transform your brand with our innovative digital solutions that
+            captivate and engage your audience.
+          </p>
+        </div>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card border-0 border-bottom border-primary shadow-sm">
+                <div class="card-body p-4 p-xxl-5">
+                  <figure>
+                    <img
+                      class="img-fluid rounded rounded-circle mb-4 border border-5"
+                      loading="lazy"
+                      src="{% static 'image/test/Fatima.png' %}"
+                      height="100px"
+                      width="100px"
+                      alt="Fatima"
+                    />
+                    <figcaption>
+                      <div
+                        class="bsb-ratings text-primary mb-3"
+                        data-bsb-star="5"
+                        data-bsb-star-off="0"
+                      ></div>
+                      <blockquote class="bsb-blockquote-icon mb-4">
+                        Degreatarizona Services Limited transformed our outdated
+                        systems with their exceptional web development and
+                        cybersecurity expertise. Their dedication to client
+                        satisfaction is evident in every detail. Truly
+                        outstanding work!
+                      </blockquote>
+                      <h4 class="mb-2">Fatima K.</h4>
+                      <h5 class="fs-6 text-secondary mb-0">
+                        Operations Manager
+                      </h5>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card border-0 border-bottom border-primary shadow-sm">
+                <div class="card-body p-4 p-xxl-5">
+                  <figure>
+                    <img
+                      class="img-fluid rounded rounded-circle mb-4 border border-5"
+                      loading="lazy"
+                      src="{% static 'image/test/Kabiru.jpeg' %}"
+                      height="100px"
+                      width="100px"
+                      alt="Kabiru"
+                    />
+                    <figcaption>
+                      <div
+                        class="bsb-ratings text-primary mb-3"
+                        data-bsb-star="5"
+                        data-bsb-star-off="0"
+                      ></div>
+                      <blockquote class="bsb-blockquote-icon mb-4">
+                        I was blown away by the creativity and precision of
+                        Degreatarizona Services Limited. From logo design to
+                        website development, their team exceeded my
+                        expectations. Highly recommended for anyone seeking
+                        top-tier digital solutions!
+                      </blockquote>
+                      <h4 class="mb-2">Kabiru O.</h4>
+                      <h5 class="fs-6 text-secondary mb-0">Entrepreneur</h5>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card border-0 border-bottom border-primary shadow-sm">
+                <div class="card-body p-4 p-xxl-5">
+                  <figure>
+                    <img
+                      class="img-fluid rounded rounded-circle mb-4 border border-5"
+                      loading="lazy"
+                      src="{% static 'image/test/Chinyere.png' %}"
+                      height="100px"
+                      width="100px"
+                      alt="Chinyere"
+                    />
+                    <figcaption>
+                      <div
+                        class="bsb-ratings text-primary mb-3"
+                        data-bsb-star="4"
+                        data-bsb-star-off="1"
+                      ></div>
+                      <blockquote class="bsb-blockquote-icon mb-4">
+                        Working with Degreatarizona Services Limited was a
+                        game-changer for our business. They delivered a stunning
+                        website that is not only visually appealing but also
+                        user-friendly and secure. Their professionalism and
+                        attention to detail are unmatched!
+                      </blockquote>
+                      <h4 class="mb-2">Chinyere A.</h4>
+                      <h5 class="fs-6 text-secondary mb-0">Business Owner</h5>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true" ></span> -->
+            <i
+              class="fa fa-arrow-left"
+              aria-hidden="true"
+              style="
+                border: 1px solid #1e3a8a;
+                border-radius: 50px;
+                color: black;
+                padding: 10px;
+              "
+            ></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i
+              class="fa fa-arrow-right"
+              aria-hidden="true"
+              style="
+                border: 1px solid #1e3a8a;
+                border-radius: 50px;
+                color: black;
+                padding: 10px;
+              "
+            ></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </main>
+{% endblock content %}
+  </body>
 </html>
