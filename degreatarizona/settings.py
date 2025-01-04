@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
+import cloudinary
+import cloudinary.uploader
+from cloudinary.utils import cloudinary_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,14 +28,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(%r7#h448=m2dybbx^$%*b4@04o(zw6@2(-3jk^#jwe$g=!bk^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','degreatarizona.vercel.app']
 
+# Configuration       
+cloudinary.config( 
+    cloud_name = "db4tfska4", 
+    api_key = "431171566913957", 
+    api_secret = "jUbxELF04Sf3wyhmyH1pRGrI8CE", 
+    secure=True
+)
+DEFAULT_FILE_STORAGE = 'cloudinary.storage.MediaCloudinaryStorage'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'arizona',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +143,18 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "DSL Admin",
+    "site_header": "DSL",
+    "site_brand": "DSL",
+    "login_logo": None,
+    "login_logo_dark": None,
+    "site_logo_classes": "img-circle",
+    "site_icon": None,
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+}
